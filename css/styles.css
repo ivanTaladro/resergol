@@ -65,7 +65,7 @@ body {
 
 .carouselImagenes{
     
-       width:1000px;
+       width:750px;
        height:400px;
        
     }
@@ -142,5 +142,5 @@ h3,h4,h5 {
 }
 
 #main {
- padding-top:120px;
+ padding-top:20px;
 }
