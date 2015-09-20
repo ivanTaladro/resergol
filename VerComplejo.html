@@ -11,15 +11,20 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+        
+        
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        
 	</head>
 	<body>
 
 <div class="navbar navbar-default" id="navbar">
     <div class="col-md-12">
         <div class="collapse navbar-collapse" id="navbar-collapse">
-            <div class="pull-left">
-                <a href="Index.html" class="menuLink" role="application"><h4><b>RESERGOL</b></h4></a>
-            </div>
           <ul class="nav navbar-nav navbar-right">
              <li><a href="#loginModal" role="button" data-toggle="modal">Iniciar Sesión</a></li>
              <li><a href="#registracionModal" role="button" data-toggle="modal">¡Registrate!</a></li>
@@ -31,11 +36,34 @@
 
 <!--main-->
 <div class="container" id="main">
+    
+    
+     <div class="container">
+
+
    <div class="row">
-      <div class="container">
-    <div class="row">
-      <div class="col-md-6 carousel-container anchoCarousel ">
-          <h2><b>Mejores complejos</b></h2>
+       
+       <div class="col-md-4">
+           <h2><b>Complejo 1</b></h2>
+           
+           <div class="box">
+               <ul class="infoUbicacionComplejo">
+               <li><b>Provincia:</b> Buenos Aires </li>
+               <li><b>Localidad:</b> Lomas de Zamora </li>
+               <li><b>Dirección:</b> Laprida 954</li>
+               <li><b>Teléfono:</b> 4-244-2998</li>
+               </ul>
+           </div>
+           
+           <div class="boxMapa">
+            <div id="map-container"></div>
+           </div>
+       </div>
+
+    	
+       <div class="col-md-8">
+       
+           <div class="col-md-6 carousel-container anchoCarousel ">
           <div id="carouselComplejos" class="carousel slide carousel-fade">
 
             <!-- Carousel items -->
@@ -43,25 +71,21 @@
               <div data-slide-no="0" class="item carousel-item active">
                 <img src="images/complejos/complejo1.jpeg" alt="">
                 <div class="carousel-caption">
-                  <h3>Complejo 1</h3>
-                    <a href="VerComplejo.html" class="btn btn-lg btn-primary btn-custom ">VER COMPLEJO</a>
+                  <h4>Descripcion de la foto</h4>
                   <p>Contamos con 6 canchas, 2 de ellas n°5 y 4 n°7, además de un gran buffet y estacionamiento, te esperamos! .</p>
                 </div>
               </div>
               <div data-slide-no="1" class="item carousel-item">
                 <img src="images/complejos/complejo2.jpg" alt="">
                 <div class="carousel-caption">
-                  <h3>Complejo 2</h3>
-                    <a href="VerComplejo.html" class="btn btn-lg btn-primary btn-custom">VER COMPLEJO</a>
+                  <h4>Descripcion de la foto</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 </div>
               </div>
               <div data-slide-no="2" class="item carousel-item">
                 <img src="images/complejos/complejo3.jpg" alt="">
                 <div class="carousel-caption">
-                  <h3>Complejo 3</h3>
-                    <a href="VerComplejo.html" class="btn btn-lg btn-primary btn-custom">VER COMPLEJO</a>
-                    
+                  <h4>Descripcion de la foto</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 </div>
               </div>
@@ -71,243 +95,22 @@
             <a class="carousel-control right" href="#carouselComplejos" data-slide="next">›</a>
           </div>
           
-          
-          
-          
-          
-          
-          
-      </div>
-        
-      
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-  <div class="col-md-5">
-            
-
-  <div class="row db-padding-btm db-attached aver">
-            <div>
-                <div class="db-wrapper pull-right">
-                    <div class="db-pricing-eleven db-bk-color-three">
-                        <div class="type anchobtnBusqueda">
-                            COMPLEJOS
-                        </div>
-                        <div class="pricing-footer">
-
-                            <a href="BuscarComplejos.html" class="btn db-button-color-square btn-lg">BÚSQUEDA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-
-    </div>
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </div>
-  </div>
-  </div>
-    
-    
-    
-    <hr>
-
-    
-    
-    
-       <div class="row">
-      <div class="container">
-    <div class="row">
-      <div class="col-md-6 carousel-container anchoCarousel ">
-          <h2><b>Mejores torneos</b></h2>
-          <div id="carouselTorneos" class="carousel slide carousel-fade">
-
-            <!-- Carousel items -->
-            <div class="carousel-inner anchoCarousel">
-              <div data-slide-no="0" class="item carousel-item active">
-                <img src="images/torneos/torneo1.jpg" alt="">
-                <div class="carousel-caption">
-                  <h3>Torneo 1</h3>
-                    <a href="#" class="btn btn-lg btn-primary btn-custom">VER TORNEO</a>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta..</p>
-                </div>
-              </div>
-              <div data-slide-no="1" class="item carousel-item">
-                <img src="images/torneos/torneo1.jpg" alt="">
-                <div class="carousel-caption">
-                  <h3>Torneo 2</h3>
-                    <a href="#" class="btn btn-lg btn-primary btn-custom">VER TORNEO</a>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </div>
-              </div>
-              <div data-slide-no="2" class="item carousel-item">
-                <img src="images/torneos/torneo1.jpg" alt="">
-                <div class="carousel-caption">
-                  <h3>Torneo 3</h3>
-                    <a href="#" class="btn btn-lg btn-primary btn-custom">VER TORNEO</a>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </div>
-              </div>
-            </div>
-            <!-- Carousel nav -->
-            <a class="carousel-control left" href="#carouselTorneos" data-slide="prev">‹</a>
-            <a class="carousel-control right" href="#carouselTorneos" data-slide="next">›</a>
-          </div>
-          
-          
-          
-          
-          
-          
+          <div class="box-IconosComplejo"> 
+            <img src="images/iconos/wifi.png" alt="Wifi">
+            <img src="images/iconos/buffet.png" alt="Buffet">
+            <img src="images/iconos/estacionamiento.png" alt="Estacionamiento">
+            <img src="images/iconos/parrilla.jpg" alt="Parilla">  
+            <img src="images/iconos/duchas.png" alt="Duchas" tooltip="aaaa">  
+           </div>
           
       </div>
         
-   
-        
-        
-        
-        
-          <div class="col-md-5">
-            
-
-  <div class="row db-padding-btm db-attached aver">
-            <div>
-                <div class="db-wrapper pull-right">
-                    <div class="db-pricing-eleven db-bk-color-three">
-                        <div class="type anchobtnBusqueda">
-                            TORNEOS
-                        </div>
-                        <div class="pricing-footer">
-
-                            <a href="BuscarTorneos.html" class="btn db-button-color-square btn-lg">BÚSQUEDA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
            
-        </div>
-
-    </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </div>
-  </div>
-  </div>
+       
+       </div>
+       
+    </div> 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
-
 
     
     <div class="clearfix"></div>
@@ -336,7 +139,7 @@
               <input type="password" class="form-control input-lg" placeholder="Contraseña">
             </div>
             <div class="form-group">
-              <button class="btn btn-primary btn-lg btn-block btn-custom">Iniciar Sesión</button>
+              <button class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
               <span class="pull-right"></span><span><a href="#">¿Olvidaste tu contraseña?</a></span>
             </div>
           </form>
@@ -403,10 +206,10 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" id="apellido" class="form-control input-md" placeholder="Apellido">
+                                    <input type="email" id="apellido" class="form-control input-md" placeholder="Apellido">
                                 </div> 
                                 <div class="form-group">
-                                    <input type="text" id="nroDocumento" class="form-control input-md" placeholder="N° documento">
+                                    <input type="text" id="contraseñaRepetida" class="form-control input-md" placeholder="N° documento">
                                 </div>  
                             </div>    
             </fieldset>
@@ -414,11 +217,11 @@
                         </div>
                 
                 <div class="form-group">
-                <button class="btn btn-primary btn-lg btn-block btn-custom">Terminado</button>
+                <button class="btn btn-primary btn-lg btn-block">Terminado</button>
             </div>
             </fieldset> 
             </div>
-                              </form>
+         </form>
           </div>
 
             
