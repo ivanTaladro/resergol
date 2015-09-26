@@ -360,10 +360,69 @@ h3,h4,h5 {
 
 
 
+/*=============================================================
+    <PI> agrego unos estilos de prueba para dueños. Inicio
+    http://www.w3schools.com/jsref/event_onmousemove.asp
+========================================================  */
+.div-opciones{
+    border-style: solid;
+    border-width:2px;
+    border-radius:10px;
+    margin: auto;
+}
 
 
 
+.page-title {
+    color: white;
+    font-weight: 300;
+    line-height: 1;
+    margin: 11px 0 18px;
+}
 
+h2 {
+    font-size: 29.25px;
+}
+
+.azul {
+	background: #34495e;
+	color:#fff;
+	border-style: solid;
+    border-width:2px;
+    border-radius:10px;
+    margin: auto;
+}
+    
+.azul-medio{
+	background: #718EA4;
+	color:#fff;
+	border-style: solid;
+    border-width:2px;
+    border-radius:10px;
+    margin: auto;
+}
+
+.costado {
+	background:#2D5050;
+	color:#fff;
+}
+
+footer {
+	background:#517272;
+	color:#fff;
+}
+
+
+img {border-radius: 10px; border:1px solid white}
+
+body.background-dark {
+  background-color: rgba(102, 105, 104, 0.9);
+  background-image: radial-gradient(farthest-side ellipse at 10% 0, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
+  background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
+  background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
+}
+
+/*<PI> fin*/
 
 
 

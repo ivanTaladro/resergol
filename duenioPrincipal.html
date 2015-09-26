@@ -1,107 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<title>ReserGol</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	
-    <link rel="stylesheet" href="CSS/estilos.css">
-	 <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="css/styles.css" rel="stylesheet">
 
     
 </head>
-<body>
+<body class="background-dark">
+    
+    <div class="navbar navbar-default" id="navbar">
+        <div class="col-md-12">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <div class="pull-left">
+                    <a href="Index.html" class="menuLink" role="application"><h4><b>RESERGOL</b></h4></a>
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#loginModal" role="button" data-toggle="modal">Ayuda</a></li>
+                     <li><a href="#registracionModal" role="button" data-toggle="modal">Configuración de la cuenta</a></li>
+                     <li><a href="#aboutModal" role="button" data-toggle="modal">Salir</a></li>
+                </ul>
+            </div>	
+        </div>	
+    </div>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>    
-      </div>
-      <a class="navbar-brand visible-md visible-lg" href="#"></a>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">ReserGol</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Ayuda</a></li>
-          <li><a href="#">Configuración de la cuenta</a></li>
-          <li><a href="#">Salir</a></li>
-        </ul>
-      </div>
-    </nav>
     
     <div class="container-fluid">
         
         <header class="row">
             <div class="container">
-                <h4>Complejo</h4>
-                <h1>Open gallo</h1>
+                <h3>Complejo</h3>
+                <h1><b>Open gallo<b/></h1>
             </div>
         </header>
 
         <div class="container">
             <div class="principal row">
-                <article class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-4 col-md-6 col-lg-6">
+                    
                     <p>
-                        <h3>Mis Reservas</h3>
-                        <img src="http://definicionyque.es/wp-content/uploads/2013/04/calendario.jpg" class="img-responsive" alt="Image">
+                        <h2 class="page-title">Mis reservas</h2>
+                        <img src="images/dueños/calendario.jpg" class="img-responsive" alt="Image" >
                     </p>
-                </article>
+                    <a href="Index.html" class="link--target "></a>
+                   
+                </div>
 
-                <div class="principal col-xs-12 col-sm-4 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-4 col-md-6 col-lg-6">
                     <p>
-                        <h3>Mis Torneos</h3>
-                        <img src="http://static.latercera.com/20131205/1862418.jpg" class="img-responsive" alt="Image">
+                        <h2 class="page-title">Mis Torneos</h2>
+                            <a href= "http://www.infobae.com/">
+	                            <img src="images/torneos/torneo1.jpg" class="img-responsive" alt="Image">
+	                        </a>
                     </p>
                 </div>
             </div>
 
             <div class="row" >
-                <div class="azul col-xs-12 col-sm-6 col-md-4">
-                    <h3>Mi complejo</h3>
-                    <img src="http://www.hoysejuega.com/uploads/Modules/ImagenesComplejos/78.jpg" class="img-responsive" alt="Image">
+                <div class=" col-xs-12 col-sm-6 col-md-4">
+                    <h2 class="page-title">Mi complejo</h2>
+                    <img src="images/dueños/complejo.jpg" class="img-responsive" alt="Image">
                 </div>
                 
-                <div class="azul-medio col-xs-12 col-sm-6 col-md-4">
-                    <h3>Mis Canchas</h3>
-                    <img src="http://www.hoysejuega.com/uploads/Modules/ImagenesComplejos/800_600_la-revancha-futbol-5-complejo.jpg" class="img-responsive" alt="Image">
+                <div class=" col-xs-12 col-sm-6 col-md-4">
+                    <h2 class="page-title">Mis Canchas</h2>
+                    <img src="images/dueños/cancha1.jpg" class="img-responsive" alt="Image">
                 </div>
 
-                <div class="azul col-xs-12 col-sm-6 col-md-4">
-                    <h3>Lista Negra</h3>
-                    <img src="http://www.quitardeudas.com/fotos/quitardeudas_lista-morosos.jpg" class="img-responsive" alt="Image">
+                <div class=" col-xs-12 col-sm-6 col-md-4">
+                    <h2 class="page-title">Lista Negra</h2>
+                    <img src="images/dueños/ListaNegra.jpg" class="img-responsive" alt="Image">
                 </div>
             </div>
         </div>
-
-       
-              
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>    
-                  </div>
-                  <a class="navbar-brand visible-md visible-lg" href="#"></a>
-                  <div class="navbar-collapse collapse">
-                    <ul style="color:black; font-size: 16px" class="nav navbar-nav navbar-left" >
-                        <li><a href="#">Acerca de ReserGol</a></li>
-                        <li><a href="#">Copyright 2015</a></li>
-                        <li><a href="#">Política de publicidad</a></li>
-                        <li><a href="#">Contactate</a></li>
-                    </ul>
-                  </div>
        
     </div>
     
+    <div class="clearfix"></div>
+        <hr>
+        <div class="col-md-12 text-center">ReserGol 2015 -  Copyright © Todos los Derechos Reservados</div>
+        <hr>
+    <div/>    
  
 	<script src="js/vendor/jquery-1-11-1.js"></script>
 	<script src="js/vendor/bootstrap.min-3-3-1.js"></script>
