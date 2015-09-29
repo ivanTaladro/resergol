@@ -12,7 +12,7 @@
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
-	<body >
+	<body class="background-dark" >
 
 <div class="navbar navbar-default" id="navbar">
     <div class="col-md-12">
@@ -20,11 +20,35 @@
             <div class="pull-left">
                 <a href="Index.html" class="menuLink" role="application"><h4><b>RESERGOL</b></h4></a>
             </div>
+
+            
           <ul class="nav navbar-nav navbar-right">
              <li><a href="#loginModal" role="button" data-toggle="modal">Iniciar Sesión</a></li>
              <li><a href="#registracionModal" role="button" data-toggle="modal">¡Registrate!</a></li>
+              
+              <!--<li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Registrate! 
+                   <span class="caret"></span>
+               </a>
+                 <ul class="dropdown-menu" role="menu">
+                       <li><a href="#">Action</a></li>
+                       <li><a href="#">Another action</a></li>
+                       <li><a href="#">Something else here</a></li>
+                       <li class="divider"></li>
+                       <li><a href="#">Separated link</a></li>
+                       <li class="divider"></li>
+                       <li><a href="#">One more separated link</a></li>
+                 </ul>
+            </li>-->
+              
+              
+             <li><a href="#registracionDuenioModal" role="button" data-toggle="modal">Registra tu cancha!</a></li>
              <li><a href="#aboutModal" role="button" data-toggle="modal">Acerca de</a></li>
+              
           </ul>
+            
+            
+            
         </div>	
      </div>	
 </div>
@@ -112,7 +136,7 @@
                 <div class="db-wrapper pull-right">
                     <div class="db-pricing-eleven db-bk-color-three">
                         <div class="type anchobtnBusqueda">
-                            COMPLEJOS
+                            CANCHAS Y COMPLEJOS
                         </div>
                         <div class="pricing-footer">
 
@@ -433,6 +457,158 @@
   </div>
   </div>
 </div>
+    
+    
+    
+    
+    
+    
+    <!--Registración Duenio modal-->
+<div id="registracionDuenioModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-registracion">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+          
+       <label class="text-center">En Resergol te damos la posibilidad de llegar a todos los jugadores del fútbol amateur de manera
+           gratuita.
+        Sólo tenés que completar los siguientes datos y te mandaremos un e-mail como aviso para que puedas registrar tu complejo!
+       </label>
+          
+        <hr>
+    
+          
+      <div class = 'form-horizontal well'>
+          
+        <fieldset>
+            
+         <legend>Datos de usuario</legend>
+          <div class="control-group">
+            <form class="form center-block">
+              <div class="col-md-6">    
+              <div class="form-group">
+                <input type="text" id="usuario" class="form-control input-md" placeholder="Usuario">
+              </div>
+              <div class="form-group">
+                <input type="password" id="contraseña" class="form-control input-md" placeholder="Contraseña">
+              </div>
+             </div>
+             <div class="col-md-6">
+                <div class="form-group">
+                    <input type="email" id="email" class="form-control input-md" placeholder="E-Mail">
+                </div> 
+                <div class="form-group">
+                    <input type="password" id="contraseñaRepetida" class="form-control input-md" placeholder="Repita contraseña">
+                </div>  
+             </div>    
+          </fieldset>
+        </div>
+        <div class = 'form-horizontal well'>
+            <fieldset>
+                <legend>Datos personales</legend>    
+                     <div class="control-group">
+                        <form class="form center-block">
+                            <div class="col-md-6">    
+                                <div class="form-group">
+                                    <input type="text" id="nombre" class="form-control input-md" placeholder="Nombre">
+                                </div>
+                                <div class="form-group">
+                                   <select class="form-control">
+                                      <option value="-1">Tipo Doc.</option> 
+                                      <option value="1">DNI</option>
+                                      <option value="2">LC</option>
+                                      <option value="3">CI</option>  
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="apellido" class="form-control input-md" placeholder="Apellido">
+                                </div> 
+                                <div class="form-group">
+                                    <input type="text" id="nroDocumento" class="form-control input-md" placeholder="N° documento">
+                                </div>  
+                            </div>    
+            </fieldset>
+                         
+                        </div>
+                
+                
+                <div class = 'form-horizontal well'>
+            <fieldset>
+                <legend>Datos del Complejo</legend>    
+                     <div class="control-group">
+                        <form class="form center-block">
+                            <div class="col-md-6">    
+                                <div class="form-group">
+                                    <input type="text" id="nombre" class="form-control input-md" placeholder="Nombre">
+                                </div>
+                                <div class="form-group">
+                                   <select class="form-control">
+                                      <option value="-1">Seleccione Provincia</option> 
+                                      <option value="1">Buenos Aires</option>
+                                      <option value="2">Córdoba</option>
+                                      <option value="3">Catamarca</option>  
+                                      <option value="4">Salta</option>  
+                                      <option value="4">Rosario</option>
+                                    </select>
+                                    
+                                 </div>
+                                <div class="form-group">
+                                    <input type="text" id="direccion" class="form-control input-md" placeholder="Dirección (calle)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                 <div class="form-group">
+                                    <input type="text" id="telefono" class="form-control input-md" placeholder="Teléfono">
+                                </div> 
+                                <div class="form-group">
+                                   <select class="form-control">
+                                      <option value="-1">Seleccione Localidad</option> 
+                                      <option value="1">Lomas de Zamora</option>
+                                      <option value="2">Lanús</option>
+                                   </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="numeroDireccion" class="form-control input-md" placeholder="Número (altura)">
+                                </div> 
+                            </div> 
+                         
+            </fieldset>
+                         
+                        </div>
+                
+                <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block btn-custom">Terminado</button>
+            </div>
+            </fieldset> 
+            </div>
+                              </form>
+          </div>
+
+            
+            
+                    
+                
+          
+          
+          
+          
+      
+  </div>
+  </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
