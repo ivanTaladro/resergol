@@ -331,35 +331,6 @@ h3,h4,h5 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*=============================================================
     <PI> agrego unos estilos de prueba para dueños. Inicio
     http://www.w3schools.com/jsref/event_onmousemove.asp
@@ -378,6 +349,11 @@ h3,h4,h5 {
     font-weight: 300;
     line-height: 1;
     margin: 11px 0 18px;
+}
+
+.column-title{
+    color: white;
+    font-weight: 200;
 }
 
 h2 {
@@ -421,6 +397,10 @@ img {border-radius: 10px; border:1px solid white}
     	background:  rgba(51, 51, 51, 0.3);
 }
 
+td.seleccion:hover{
+    	background:  rgba(51, 51, 51, 0.3);
+}
+
 
 
 body.background-dark {
@@ -428,6 +408,95 @@ body.background-dark {
   background-image: radial-gradient(farthest-side ellipse at 10% 0, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
   background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
   background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
+}
+
+th {
+   background-color: #437983;
+   height:120px;
+   font-weight: 300;
+   font-size:20px;
+   width:125;
+   vertical-align:bottom;
+}
+
+.fontMasChica{
+    font-weight: 200;
+}
+
+.font-titulo-Filtro{
+    font-weight: 500;
+    font-size:17px;
+    
+}
+
+.horas{
+   background-color: #437983;
+   font-weight: 300;
+   font-size:20px;
+}
+
+td {
+   background-color: #88CC88;
+   height:80px;
+   width:125;
+   vertical-align:bottom;
+}
+
+.widget {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 12px 17px;
+    color: #f8f8f8;
+    background: rgba(51, 51, 51, 0.2);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.widget-controls > a, .widget-controls > span {
+    padding: 1px 4px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.45);
+    -webkit-transition: color 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
+}
+
+.widget-controls {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    word-spacing: 1px;
+}
+
+.filtro-reservas{
+    color: white;
+}
+
+.espacios{
+    border-radius: 3px;
+    /*padding: 17px 20px;*/
+    margin-bottom: 30px;
+    margin-top: 20px;
+    
+}
+
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.combo-horario{
+    width:60px; 
+    height:30px;
+    color:black;
 }
 
 /*<PI> fin*/

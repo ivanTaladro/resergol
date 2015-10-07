@@ -1,5 +1,6 @@
 
 $(document).ready(function(){/* jQuery toggle layout */
+
 $('#btnToggle').click(function(){
   if ($(this).hasClass('on')) {
     $('#main .col-md-6').addClass('col-md-4').removeClass('col-md-6');
@@ -61,15 +62,24 @@ function init_map() {
      /* google.maps.event.addDomListener(window, 'load', init_map);*/
 
 
+/*<PI> funciones agregadas por Pedro Irala. INICIO*/
  function validaLogin(){
     
     if(document.getElementById("usuario").value == "dueño"){
-      /* window.open("DuenioPrincipal.html", "_self");  Con resergol no funciona*/
+      /*window.open("DuenioPrincipal.html", "_self");  /*Con resergol no funciona*/
       window.open("DuenioPrincipal.html", ""); 
     }
     else{
       
     }
-}
+  }
  
+  
+  function mostrarCalendario(){
+      $('#fecha').datepicker("show");
+  }
  
+
+ 
+
+ /*<pi> FIN*/
