@@ -354,13 +354,14 @@
       <div class="modal-body">
           <form class="form col-md-12 center-block">
             <div class="form-group">
-              <input type="text" class="form-control input-lg" placeholder="Usuario">
+              <input id="usuario" type="text" class="form-control input-lg" placeholder="Usuario">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control input-lg" placeholder="Contraseña">
+              <input  type="password" class="form-control input-lg" placeholder="Contraseña">
             </div>
             <div class="form-group">
-              <button class="btn btn-primary btn-lg btn-block btn-custom">Iniciar Sesión</button>
+              <button class="btn btn-primary btn-lg btn-block btn-custom" onclick="validaLogin()">Iniciar Sesión</button>
+               
               <span class="pull-right"></span><span><a href="#">¿Olvidaste tu contraseña?</a></span>
             </div>
           </form>
@@ -373,6 +374,9 @@
 </div>
         
                    
+
+
+
 
         
 <!--Registración modal-->

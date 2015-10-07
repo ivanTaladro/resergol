@@ -58,9 +58,18 @@ function init_map() {
  
       }
  
-      google.maps.event.addDomListener(window, 'load', init_map);
+     /* google.maps.event.addDomListener(window, 'load', init_map);*/
 
 
- 
+ function validaLogin(){
+    
+    if(document.getElementById("usuario").value == "dueño"){
+      /* window.open("DuenioPrincipal.html", "_self");  Con resergol no funciona*/
+      window.open("DuenioPrincipal.html", ""); 
+    }
+    else{
+      
+    }
+}
  
  

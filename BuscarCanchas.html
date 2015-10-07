@@ -26,17 +26,16 @@
      </div>	
 </div>
 
-        
-<!-- Main -->
+<!--main-->
 <div class="container" id="main">
     
  <!-- Sidebar -->
     <div id="sidebar-wrapper" class="col-md-3 ''">
-        <ul class="sidebar-nav" class="col-md-3" align="left">
+        <ul class="sidebar-nav" class="col-md-3">
             <li class="sidebar-brand">
-                <h3 href="#">
-                    Busqueda de Torneos
-                </h3>
+                <a href="#">
+                    Busqueda por Complejo
+                </a>
             </li>
             <div>
                 <!-- /#Agregar las posibilidades con PHP y llenarlas -->
@@ -56,8 +55,13 @@
                 <h3 href="#">Direccion</h3>
                 <input type="text" name="txtDreccion" style="width:220px; height:30px"> 
             </div>
+            <li class="sidebar-brand">
+                <a href="#">
+                    Busqueda por Canchas
+                </a>
+            </li>
             <div>
-                <h3 href="#">Precio de minimo de incripcion</h3>
+                <h3 href="#">Precio</h3>
                 <input type="text" name="txtPrecio" style="width:220px; height:30px"> 
             </div>
             <div>
@@ -73,7 +77,16 @@
                 </SELECT> 
             </div>
             <div>
-                <h3 href="#">Aca deberia estar la busqueda por horario y/o duracion del torneo</h3>
+                <h3 href="#">Tipo de Material</h3>
+                <SELECT NAME="selCombo" SIZE=1 style="width:220px; height:30px"> 
+                <OPTION>Cesped Sintetico</OPTION>
+                <OPTION>Cemento</OPTION>
+                <OPTION>Cesped</OPTION>
+                <OPTION>Arena</OPTION>  
+                </SELECT>
+            </div>
+            <div>
+                <h3 href="#">Aca deberia estar la busqueda por horario</h3>
                 <input type="text" name="txtPrecio" style="width:220px; height:30px"> 
             </div>
             <!-- /#Agregar mas objetos si es necesario -->
@@ -182,7 +195,7 @@
     
   </div>
 </div>
-<!-- Main -->
+    <!--/main-->
 
 <!--login modal-->
 <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -283,9 +296,18 @@
             </div>
             </fieldset> 
             </div>
-         </form>
+                              </form>
           </div>
+
+            
+            
+                    
+                
           
+          
+          
+          
+      
   </div>
   </div>
 </div>
