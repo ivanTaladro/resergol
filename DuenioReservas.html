@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>ReserGol-Reservas</title>
+
+    
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/datepicker.css" rel="stylesheet">
+
+    
+</head>
+<body class="background-dark">
+    
+    <div class="navbar navbar-default" id="navbar">
+        <div class="col-md-12">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <div class="row">
+                
+                    <a href="Index.html" class="menuLink" role="application"><h4><b>RESERGOL</b></h4></a>
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#loginModal" role="button" data-toggle="modal">Ayuda</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          Menú <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="DuenioPrincipal.html" role="button">Principal</a></li>
+                          <li><a href="DuenioTorneos.html" role="button">Mis torneos</a></li>
+                          <li><a href="DuenioComplejo.html" role="button">Mi complejo</a></li>
+                          <li><a href="DuenioCanchas.html" role="button">Mis canchas</a></li>
+                          <li><a href="DuenioListaNegra.html" role="button">Lista negra</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#registracionModal" role="button" data-toggle="modal">Configuración de la cuenta</a></li>
+                    <li><a href="#aboutModal" role="button" data-toggle="modal">Salir</a></li>
+                </ul>
+            </div>	
+        </div>	
+        
+    </div>
+
+    
+    <div class="container-fluid">
+        
+        <header class="row widget" >
+            <div style = "color: white" class="container">
+                <h3  style=" font-size: 50px; text-align:center;  font-style:italic;" ></span>Reservas</h3>
+               
+               <div class="principal row" style= "text-align:center">
+                   <button type="button" class="btn" style="border-radius: 8px; background-color: transparent";>
+                        <i class="glyphicon glyphicon-arrow-left"></i>
+                    </button>
+                    
+                    <label class="fontMasChica" style="text-align:center">Jueves 1 de Octubre de 2015</label>
+                    
+                    <button type="button" class="btn" style="border-radius: 8px; background-color: transparent";>
+                        <i class="glyphicon glyphicon-arrow-right"></i>
+                    </button>
+                <div>    
+            </div>
+        </header>
+        
+       
+        <div class="container">
+            <div class ="principal row filtro-reservas">
+                <div class="col-xs-12 col-md-3">
+                    <section class="widget">
+                        <header>
+                            <h3>Filtrar por</h3>    
+                        </header>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expandir" href="#" style="display: none;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Contraer" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="close" title="Cerrar" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                        
+                        <label class="font-titulo-Filtro" style="margin-top:4px;"><input type="checkbox" value="" > Disponibles</label>
+                        <br>
+                        
+                        
+                        
+                        <div class="form-group ">
+                            <label for="sel2" class="font-titulo-Filtro" style="margin-top:10px;">Canchas:</label>
+                            
+                            <div class ="checkbox"> 
+                                <label class="fontMasChica"><input type="checkbox" value="" >Todas</label>
+                            </div>
+                            <div class ="checkbox">
+                                <label class="fontMasChica"><input type="checkbox" value="" >Maracana</label>
+                            </div>    
+                            <div class ="checkbox">
+                                <label class="fontMasChica"><input type="checkbox" value="" >El fortín</label>
+                            </div>        
+                            <div class ="checkbox">
+                                <label class="fontMasChica"><input type="checkbox" value="" >La fortaleza</label>
+                            </div>    
+                            <div class ="checkbox">
+                                <label class="fontMasChica"><input type="checkbox" value="" >EL monumental</label>
+                            </div>        
+                            <div class ="checkbox">
+                                <label class="fontMasChica"><input type="checkbox" value="" >La visera</label>
+                            </div>    
+                          
+                        </div>
+                         
+                        <div class="form-group espacios">
+                            <label for="sel2" class="font-titulo-Filtro" >Fecha:</label>
+                            <div class='input-group date'>
+                                <input type='text'  class="form-control" id="fecha" style="height:31px;"/>
+                                <span class="input-group-addon"  style="height:30px;"  onclick="mostrarCalendario()" >
+                                <span class="glyphicon glyphicon-calendar"  ></span>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group espacios">
+                            <div class ="principal row espacios" style= "margin-left: 1px;">
+                                <label class="font-titulo-Filtro">Horarios:</label>
+                                <br>
+                                <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                                    <label class="fontMasChica" ><input type="checkbox" value=""> Todos</label>
+                                </div>
+                                
+                                <label for="sel2" class="fontMasChica" style= "margin-left: 2px; margin-top: 4px; " >Desde:</label>
+                                <SELECT NAME="cboHoraInicial" SIZE=1 class="combo-horario"> 
+                                <OPTION>8 Hs</OPTION>
+                                <OPTION>9 Hs</OPTION>
+                                <OPTION>10 Hs</OPTION>
+                                <OPTION>11 Hs</OPTION> 
+                                <OPTION>12 Hs</OPTION> 
+                                <OPTION>13 Hs</OPTION> 
+                                <OPTION>14 Hs</OPTION> 
+                                <OPTION>15 Hs</OPTION>
+                                <OPTION>16 Hs</OPTION> 
+                                <OPTION>17 Hs</OPTION> 
+                                <OPTION>18 Hs</OPTION> 
+                                <OPTION>19 Hs</OPTION> 
+                                <OPTION>19 Hs</OPTION> 
+                                <OPTION>20 Hs</OPTION> 
+                                <OPTION>21 Hs</OPTION> 
+                                <OPTION>22 Hs</OPTION> 
+                                <OPTION>23 Hs</OPTION> 
+                            </SELECT> 
+                           
+                                <label for="sel2" class="fontMasChica" style= "margin-left: 1px" > Hasta:</label>
+                                <SELECT NAME="cboHoraFin" SIZE=1 class="combo-horario"> 
+                                <OPTION>8 Hs</OPTION>
+                                <OPTION>9 Hs</OPTION>
+                                <OPTION>10 Hs</OPTION>
+                                <OPTION>11 Hs</OPTION> 
+                                <OPTION>12 Hs</OPTION> 
+                                <OPTION>13 Hs</OPTION> 
+                                <OPTION>14 Hs</OPTION> 
+                                <OPTION>15 Hs</OPTION>
+                                <OPTION>16 Hs</OPTION> 
+                                <OPTION>17 Hs</OPTION> 
+                                <OPTION>18 Hs</OPTION> 
+                                <OPTION>19 Hs</OPTION> 
+                                <OPTION>19 Hs</OPTION> 
+                                <OPTION>20 Hs</OPTION> 
+                                <OPTION>21 Hs</OPTION> 
+                                <OPTION>22 Hs</OPTION> 
+                                <OPTION  selected="selected">23</OPTION> 
+                            </SELECT> 
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="form-group espacios">
+                            <label class="font-titulo-Filtro ">Caracteristicas de canchas:</label>
+                            
+                            <div class ="principal row " style= "margin-left: 1px; ">
+                                <label class="fontMasChica" style= "margin-left: 2px; margin-top:4px; " >Cant. de jugadores:</label>
+                            </div>
+                            <div class ="principal row " style= "margin-left: 1px; ">
+                                <SELECT NAME="cboCantJugadores" SIZE=1 style="width:220px; height:30px; color:black;"> 
+                                    <OPTION>Todos</OPTION>
+                                    <OPTION>5</OPTION>
+                                    <OPTION>6</OPTION>
+                                    <OPTION>7</OPTION>
+                                    <OPTION>8</OPTION> 
+                                    <OPTION>9</OPTION> 
+                                    <OPTION>10</OPTION> 
+                                    <OPTION>11</OPTION> 
+                                </SELECT> 
+                            </div>
+                            
+                            <div class ="principal row " style= "margin-left: 1px; margin-top: 3px; ">
+                                <label class="fontMasChica" style= "margin-left: 2px;  margin-top: 5px;" >Superficie:</label>
+                            </div>    
+                            <div class ="principal row " style= "margin-left: 1px; ">
+                                <SELECT NAME="cboPisos" SIZE=1 style="width:220px; height:30px; color:black;"> 
+                                <OPTION>Todos</OPTION>
+                                <OPTION>Sintetico</OPTION>
+                                <OPTION>Tierra</OPTION>
+                                <OPTION>Cesped</OPTION>
+                                <OPTION>Baldoza</OPTION> 
+                            </SELECT>
+                            </div>
+                       </div>
+                       
+                       <div>
+                           <button type="button" class="btn btn-primary  btn-lg btn-block" style="border-radius: 8px;">
+                               
+                               <i class="glyphicon glyphicon-search"></i>
+                               Buscar...
+                           </button>
+                       </div>       
+           
+                     </section>
+                </div>
+                
+                
+                 
+                <div class="table-responsive col-md-9 ">     
+                    <section class="widget">
+                        <table  class="table table-bordered text-center " style= "table-layout: fixed; vertical-align:center;">
+                            <tr>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1">Maracana </th>
+                                <th class="col-sm-1">El fortín</th>
+                                <th class="col-sm-1">La fortaleza</th>
+                                <th class="col-sm-1">El monumental</th>
+                                <th class="col-sm-1">La visera</th>
+                            </tr>
+                            
+                            <tr>
+                                <td class="horas">8 Hs</td>
+                                
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Juan</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Pedro  </td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Lucas</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion" style="background-color:#F63333">Disponible</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Fede</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="horas">9 Hs</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Fede</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Guille</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Alan</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Disponible</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Ivan</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="horas">10 Hs</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Juan</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Pedro</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Lucas</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Disponible</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Fede</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="horas">11 Hs</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Juan</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Pedro</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Lucas</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Disponible</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Fede</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="horas">12 Hs</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Juan</td>
+                                <td href="#reservasModal" role="button" data-toggle="modal" class="seleccion">Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">13 Hs</td>
+                                <td>luis</td>
+                                <td>nacho</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">14 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">15 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">16 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">17 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">18 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">19 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">20 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">21 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">22 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="horas">23 Hs</td>
+                                <td>Juan</td>
+                                <td>Pedro</td>
+                                <td>Lucas</td>
+                                <td>Disponible</td>
+                                <td>Fede</td>
+                            </tr>
+                            
+                            
+                        </table>
+                     </section>    
+                </div>
+            
+            </div>
+        </div>    
+    </div>
+    
+    <div class="clearfix"></div>
+        <hr>
+        <div class="col-md-12 text-center">ReserGol 2015 -  Copyright © Todos los Derechos Reservados</div>
+        <hr>
+    <div/>    
+ 
+<!--reservas modal-->
+    <div id="reservasModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-registracion">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              </div>
+              
+              <div class="modal-body">
+                  <div class = 'form-horizontal well'>
+                    <fieldset>
+                     <legend>Datos de la cancha</legend>
+                      <div class="control-group">
+                        <form class="form center-block">
+                            <div class="col-md-4"> 
+                                 <div class="form-group">
+                                    <label class="control-label">Cancha:</label>
+                                    <br>
+                                    <label class="control-label">Precio</label>
+                                    <br>
+                                    <label class="control-label">Cant. de jugadores:</label>
+                                    <br>
+                                    <label class="control-label">Superficie:</label>
+                                 </div>
+                            </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label class="control-label">Maracana</label>
+                                <br>
+                                <label class="control-label">$ 300</label>
+                                <br>
+                                <label class="control-label">5</label>
+                                <br>
+                                <label class="control-label">Cesped</label>
+                            </div>
+                         </div>    
+                      </fieldset>
+                    </div>
+                <div class = 'form-horizontal well'>
+                    <fieldset>
+                        <legend>Datos de la reserva</legend>    
+                             <div class="control-group">
+                                <form class="form center-block">
+                                    <div class="col-md-2">    
+                                        <div class="form-group" style= "margin-top:8px;">
+                                            <label >Ususario:</label>
+                                        </div>
+                                        <div class="form-group" style= "margin-top:22px;">
+                                                <label >Horario:</label>
+                                        </div>
+                                        <div class="form-group" style= "margin-top:26px;">
+                                            <label >Seña:</label>
+                                        </div>
+                                          <div class="form-group" style= "margin-top:22px;">
+                                            <label>Resta:</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <input type="text" id="usuario" class="form-control input-md" placeholder="Cliente">
+                                        </div> 
+                                        <div class="form-group">
+                                             <label for="sel2"  class="fontMasChica" style= "margin-left: 2px;" >Desde:</label>
+                                                <SELECT NAME="cboHoraInicial" > 
+                                                <OPTION>8 Hs</OPTION>
+                                                <OPTION>9 Hs</OPTION>
+                                                <OPTION>10 Hs</OPTION>
+                                                <OPTION>11 Hs</OPTION> 
+                                                <OPTION>12 Hs</OPTION> 
+                                                <OPTION>13 Hs</OPTION> 
+                                                <OPTION>14 Hs</OPTION> 
+                                                <OPTION>15 Hs</OPTION>
+                                                <OPTION>16 Hs</OPTION> 
+                                                <OPTION>17 Hs</OPTION> 
+                                                <OPTION>18 Hs</OPTION> 
+                                                <OPTION>19 Hs</OPTION> 
+                                                <OPTION>19 Hs</OPTION> 
+                                                <OPTION>20 Hs</OPTION> 
+                                                <OPTION>21 Hs</OPTION> 
+                                                <OPTION>22 Hs</OPTION> 
+                                                <OPTION>23 Hs</OPTION> 
+                                            </SELECT> 
+                                           
+                                                <label for="sel2" class="fontMasChica" style= "margin-left: 50px; " > Hasta:</label>
+                                                <SELECT NAME="cboHoraFin" SIZE=1 > 
+                                                <OPTION>8 Hs</OPTION>
+                                                <OPTION>9 Hs</OPTION>
+                                                <OPTION>10 Hs</OPTION>
+                                                <OPTION>11 Hs</OPTION> 
+                                                <OPTION>12 Hs</OPTION> 
+                                                <OPTION>13 Hs</OPTION> 
+                                                <OPTION>14 Hs</OPTION> 
+                                                <OPTION>15 Hs</OPTION>
+                                                <OPTION>16 Hs</OPTION> 
+                                                <OPTION>17 Hs</OPTION> 
+                                                <OPTION>18 Hs</OPTION> 
+                                                <OPTION>19 Hs</OPTION> 
+                                                <OPTION>19 Hs</OPTION> 
+                                                <OPTION>20 Hs</OPTION> 
+                                                <OPTION>21 Hs</OPTION> 
+                                                <OPTION>22 Hs</OPTION> 
+                                                <OPTION  selected="selected">23</OPTION> 
+                                            </SELECT> 
+                                        </div> 
+                                        <div class ="principal row" style= "margin-top:0px;">
+                                            <input type="text" id="seña" class="form-control input-md" placeholder="$ 150">
+                                        </div>
+                                        <div class="form-group" style= "margin-top:8px;">
+                                            <input type="text" id="resta" class="form-control input-md" placeholder="$ 150">
+                                        </div> 
+                                    </div>    
+                    </fieldset>
+                                 
+                                </div>
+                        
+                    <fieldset>
+                        <div class="form-group">
+                           <div class="col-md-4"> 
+                                <div class="form-group">
+                                    <button class="btn  btn-md btn-danger btn-block" style="border-radius: 7px;">Cancelar</button>   
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4"> 
+                                <div class="form-group">
+                                    <button class="btn  btn-md btn-warning btn-block" style="border-radius: 7px;">Reserva Fija</button>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4"> 
+                                <div class="form-group">
+                                    <button class="btn  btn-md btn-success btn-block" style="border-radius: 7px;">Completar pago</button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <div class="form-group">
+                           <div class="col-md-12"> 
+                                <div class="form-group">
+                                    <button class="btn  btn-md btn-primary btn-block" style="border-radius: 7px;">Reservar</button>
+                                </div>
+                            </div>
+                    </fieldset>
+                    
+                    </fieldset> 
+                    </div>
+                                      </form>
+                  </div>
+          </div>
+      </div>
+    </div> 
+    
+    <script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	
+	  
+	
+</body>
+</html>
