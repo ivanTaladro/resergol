@@ -22,6 +22,7 @@ $(document).ready(function() {
   $(".carousel").carousel({
     interval: 2000
   });
+
   $(".carousel").on("slid", function() {
     var to_slide;
     to_slide = $(".carousel-item.active").attr("data-slide-no");
@@ -58,7 +59,7 @@ function init_map() {
  
       }
  
-     /* google.maps.event.addDomListener(window, 'load', init_map);*/
+      google.maps.event.addDomListener(window, 'load', init_map);
 
 
  function validaLogin(){
@@ -73,3 +74,6 @@ function init_map() {
 }
  
  
+
+
+
