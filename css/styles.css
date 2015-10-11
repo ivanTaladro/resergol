@@ -11,9 +11,11 @@ author: bootply.com
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400);
 body {
+  /*<PI> comento las lineas de abajo*/
   background-color: #92AB99; /*COLOR DE FONDO PRINCIPAL*/
   -webkit-font-smoothing: antialiased;
   font: normal 14px Roboto,arial,sans-serif;
+  
 }
 .navbar-default {background-color:#f4f4f4;margin-top:0px;border-width:0;z-index:5;}
 .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;font-weight:800;background-color:transparent;}
@@ -22,7 +24,7 @@ body {
 
 .header {background-color:#ffffff;border-width:0;}
 .header .navbar-collapse {background-color:#ffffff;}
-.btn,.form-control,.panel,.list-group,.well {border-radius:1px;box-shadow:0 0 0;}
+/*.btn,.form-control,.panel,.list-group,.well {border-radius:1px;box-shadow:0 0 0;}*//*<PI>*/
 .form-control {border-color:#d7d7d7;}
 .btn-primary {border-color:transparent;}
 .btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {background-color:#4285f4;}
@@ -397,12 +399,6 @@ img {border-radius: 10px; border:1px solid white}
     	background:  rgba(51, 51, 51, 0.3);
 }
 
-td.seleccion:hover{
-    	background:  rgba(51, 51, 51, 0.3);
-}
-
-
-
 body.background-dark {
   background-color: rgba(102, 105, 104, 0.9);
   background-image: radial-gradient(farthest-side ellipse at 10% 0, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
@@ -499,6 +495,72 @@ td {
     color:black;
 }
 
+
+
+body {
+  font-weight: 300;
+  padding-bottom: 100px;
+  background-color: rgba(74, 121, 147, 0.89);
+  background-image: radial-gradient(farthest-side ellipse at 10% 0, rgba(74, 121, 147, 0.89), rgba(204, 204, 204, 0.85) 80%, rgba(185, 135, 131, 0.87) 120%);
+  background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, rgba(74, 121, 147, 0.89), rgba(204, 204, 204, 0.85) 80%, rgba(185, 135, 131, 0.87) 120%);
+  background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(74, 121, 147, 0.89), rgba(204, 204, 204, 0.85) 80%, rgba(185, 135, 131, 0.87) 120%);
+  background-attachment: fixed, fixed;
+}
+
+
+legend-mod {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 18px;
+    font-size: 19.5px;
+    line-height: inherit;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.section {
+    font-size: 14px;
+    color: #d2d2d2;
+    vertical-align: middle;
+    line-height: 30px;
+    padding: 10px 0 0;
+}
+
+
+label,
+input,
+button,
+select,
+textarea {
+  font-weight: 300;
+}
+
+
+
+.control-label {
+    text-align: left;
+    
+}
+
+form-label-leftl {
+    text-align: left;
+  }
+  
+ .form-control.input-transparent {
+  border: none;
+  color: #f8f8f8;
+  background-color: rgba(51, 51, 51, 0.4);
+}
+
+.mensajeExplicacion {
+    font-style:italic;
+}
+
+.comentarios{
+    border-radius:10px;
+}
 /*<PI> fin*/
 
 
@@ -640,18 +702,19 @@ PRICING STYLES
 
 .box
 {
-    opacity: inherit;
+    background-color: darkseagreen;
     height: 100px;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 15px;
 
 }
 
 .boxMapa
 {   
     margin-top: 20px;
-    height: 200px;
-    width: 260px;
+    background-color: darkseagreen;
+    height: 300px;
+    width: 300px;
     border-radius: 15px;
 
 }
@@ -659,6 +722,7 @@ PRICING STYLES
 .box-IconosComplejo
 {   
     margin-top: 30px;
+    background-color: darkseagreen;
     height: 50px;
     width: 600px;
     border-radius: 15px;
@@ -671,64 +735,19 @@ PRICING STYLES
 .infoUbicacionComplejo
 {
    display: inline-block;
-
 }
 
 #map-container
 { 
-    height: 200px;
+    height: 300px;
 }
 
-#map-outer {  height: 200px; 
+#map-outer {  height: 300px; 
 	  				padding: 20px; 
 					border: 2px solid #CCC; 
 					margin-bottom: 20px; 
 					background-color:#FFF }
 
-#map-container { height: 200px }
-
-
-.cuadro_intro_hover{
-    	padding: 0px;
-		position: relative;
-		overflow: hidden;
-		height: 200px;
-	}
-	.cuadro_intro_hover:hover .caption{
-		opacity: 1;
-		transform: translateY(-150px);
-		-webkit-transform:translateY(-150px);
-		-moz-transform:translateY(-150px);
-		-ms-transform:translateY(-150px);
-		-o-transform:translateY(-150px);
-	}
-	.cuadro_intro_hover img{
-		z-index: 4;
-	}
-	.cuadro_intro_hover .caption{
-		position: absolute;
-		top:150px;
-		-webkit-transition:all 0.3s ease-in-out;
-		-moz-transition:all 0.3s ease-in-out;
-		-o-transition:all 0.3s ease-in-out;
-		-ms-transition:all 0.3s ease-in-out;
-		transition:all 0.3s ease-in-out;
-		width: 100%;
-	}
-	.cuadro_intro_hover .blur{
-		background-color: rgba(0,0,0,0.7);
-		height: 300px;
-		z-index: 5;
-		position: absolute;
-		width: 100%;
-	}
-	.cuadro_intro_hover .caption-text{
-		z-index: 10;
-		color: #fff;
-		position: absolute;
-		height: 300px;
-		text-align: center;
-		top:-20px;
-		width: 100%;
+#map-container { height: 300px }
 
 
