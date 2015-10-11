@@ -1,342 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>ReserGol</title>
-		<meta name="generator" content="Bootply" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
-	</head>
-	<body>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>ReserGol-Reservas</title>
 
-<div class="navbar navbar-default" id="navbar">
-    <div class="col-md-12">
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-             <li><a href="#loginModal" role="button" data-toggle="modal">Iniciar Sesión</a></li>
-             <li><a href="#registracionModal" role="button" data-toggle="modal">¡Registrate!</a></li>
-             <li><a href="#aboutModal" role="button" data-toggle="modal">Acerca de</a></li>
-          </ul>
+    
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/datepicker.css" rel="stylesheet">
+	
+	
+	<script language="JavaScript">
+	
+    function muestra_oculta(id)
+    {
+        if (document.getElementById)
+        { 
+            //se define la variable "el" igual a nuestro div
+            var el = document.getElementById(id); 
+            
+            //damos un atributo display:none que oculta el div
+            if(el.id == "filtroCancha")
+            {
+                var filtroComplejo = document.getElementById("filtroComplejo"); 
+                
+                el.style.display = (el.style.display == 'none') ? 'block' : 'none'; 
+                filtroComplejo.style.display = (filtroComplejo.style.display == 'block') ? 'none' : 'block'; 
+            }
+            else if(el.id == "filtroComplejo")
+            {
+                var filtroCancha = document.getElementById("filtroCancha");
+                
+                el.style.display = (el.style.display == 'none') ? 'block' : 'none'; 
+                
+                filtroCancha.style.display = (filtroCancha.style.display == 'block') ? 'none' : 'block'; 
+            }
+        }
+    }
+    
+    /*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
+    window.onload = function(){
+        /* "contenido_a_mostrar" es el nombre que le dimos al DIV */
+        muestra_oculta('filtroCancha');
+    }
+    
+    </script>
+
+    
+</head>
+<body class="background-dark">
+    
+    <div class="navbar navbar-default" id="navbar">
+        <div class="col-md-12">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <div class="row">
+                
+                    <a href="Index.html" class="menuLink" role="application"><h4><b>RESERGOL</b></h4></a>
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#loginModal" role="button" data-toggle="modal">Ayuda</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                              Menú <span class="caret"></span>
+                            </a>
+                        </li>
+                    <li>
+                        <a href="#registracionModal" role="button" data-toggle="modal">Configuración de la cuenta</a>
+                    </li>
+                    <li>
+                        <a href="#aboutModal" role="button" data-toggle="modal">Salir</a>
+                    </li>
+                </ul>
+            </div>	
         </div>	
-     </div>	
-</div>
-
-<!--main-->
-<div class="container" id="main">
-    
- <!-- Sidebar -->
-    <div id="sidebar-wrapper" class="col-md-3 ''">
-        <ul class="sidebar-nav" class="col-md-3">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Busqueda por Complejo
-                </a>
-            </li>
-            <div>
-                <!-- /#Agregar las posibilidades con PHP y llenarlas -->
-                <h3 href="#">Localidad</h3>
-                <SELECT NAME="selCombo" SIZE=1 style="width:220px; height:30px"> 
-                <OPTION>Quilmes</OPTION>
-                <OPTION>Avellaneda</OPTION>
-                <OPTION>Lomas de Zamora</OPTION>
-                <OPTION>Banfield</OPTION> 
-                <OPTION>Varela</OPTION> 
-                <OPTION>Boedo</OPTION> 
-                <OPTION>Lanus</OPTION> 
-                <OPTION>Sarandi</OPTION> 
-                </SELECT>
-            </div>
-            <div>
-                <h3 href="#">Direccion</h3>
-                <input type="text" name="txtDreccion" style="width:220px; height:30px"> 
-            </div>
-            <li class="sidebar-brand">
-                <a href="#">
-                    Busqueda por Canchas
-                </a>
-            </li>
-            <div>
-                <h3 href="#">Precio</h3>
-                <input type="text" name="txtPrecio" style="width:220px; height:30px"> 
-            </div>
-            <div>
-                <h3 href="#">Cantidad de Jugadores</h3>
-                <SELECT NAME="selCombo" SIZE=1 style="width:220px; height:30px"> 
-                <OPTION>5</OPTION>
-                <OPTION>6</OPTION>
-                <OPTION>7</OPTION>
-                <OPTION>8</OPTION> 
-                <OPTION>9</OPTION> 
-                <OPTION>10</OPTION> 
-                <OPTION>11</OPTION> 
-                </SELECT> 
-            </div>
-            <div>
-                <h3 href="#">Tipo de Material</h3>
-                <SELECT NAME="selCombo" SIZE=1 style="width:220px; height:30px"> 
-                <OPTION>Cesped Sintetico</OPTION>
-                <OPTION>Cemento</OPTION>
-                <OPTION>Cesped</OPTION>
-                <OPTION>Arena</OPTION>  
-                </SELECT>
-            </div>
-            <div>
-                <h3 href="#">Aca deberia estar la busqueda por horario</h3>
-                <input type="text" name="txtPrecio" style="width:220px; height:30px"> 
-            </div>
-            <!-- /#Agregar mas objetos si es necesario -->
-        </ul>
     </div>
-    <!-- /#sidebar-wrapper -->
-    
-    <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="images/complejos/complejo3.jpg" alt="" style="width:400px; height:208px">
-                </a>
-                <h3>
-                    <a href="#">Nombre del complejo</a>
-                </h3>
-                <p>Descripcion Sencilla</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-  
-      
-    <hr>
-    <div class="col-md-12 text-center">ReserGol 2015 -  Copyright © Todos los Derechos Reservados</div>
-    <hr>
-    
-  </div>
-</div>
-    <!--/main-->
-
-<!--login modal-->
-<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-  <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h2 class="text-center"><img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"><br>Ingresar</h2>
-      </div>
-      <div class="modal-body">
-          <form class="form col-md-12 center-block">
-            <div class="form-group">
-              <input type="text" class="form-control input-lg" placeholder="Usuario">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control input-lg" placeholder="Contraseña">
-            </div>
-            <div class="form-group">
-              <button class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
-              <span class="pull-right"></span><span><a href="#">¿Olvidaste tu contraseña?</a></span>
-            </div>
-          </form>
-      </div>
-      <div class="modal-footer">
-          
-      </div>
-  </div>
-  </div>
-</div>
+    <div class="container-fluid">
         
-                   
-
-        
-<!--Registración modal-->
-<div id="registracionModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-registracion">
-  <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      </div>
-      <div class="modal-body">
-      <div class = 'form-horizontal well'>
-        <fieldset>
-         <legend>Datos de usuario</legend>
-          <div class="control-group">
-            <form class="form center-block">
-              <div class="col-md-6">    
-              <div class="form-group">
-                <input type="text" id="usuario" class="form-control input-md" placeholder="Usuario">
-              </div>
-              <div class="form-group">
-                <input type="password" id="contraseña" class="form-control input-md" placeholder="Contraseña">
-              </div>
-             </div>
-             <div class="col-md-6">
-                <div class="form-group">
-                    <input type="email" id="email" class="form-control input-md" placeholder="E-Mail">
-                </div> 
-                <div class="form-group">
-                    <input type="password" id="contraseñaRepetida" class="form-control input-md" placeholder="Repita contraseña">
-                </div>  
-             </div>    
-          </fieldset>
+    <header class="row widget" >
+        <div style = "color: white" class="container">
+            <h3 style="font-size: 50px; text-align:center">Filtros</h3>
         </div>
-        <div class = 'form-horizontal well'>
-            <fieldset>
-                <legend>Datos personales</legend>    
-                     <div class="control-group">
-                        <form class="form center-block">
-                            <div class="col-md-6">    
-                                <div class="form-group">
-                                    <input type="text" id="nombre" class="form-control input-md" placeholder="Nombre">
-                                </div>
-                                <div class="form-group">
-                                   <select class="form-control">
-                                      <option value="-1">Tipo Doc.</option> 
-                                      <option value="1">DNI</option>
-                                      <option value="2">LC</option>
-                                      <option value="3">CI</option>  
-                                    </select>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" id="apellido" class="form-control input-md" placeholder="Apellido">
-                                </div> 
-                                <div class="form-group">
-                                    <input type="text" id="contraseñaRepetida" class="form-control input-md" placeholder="N° documento">
-                                </div>  
-                            </div>    
-            </fieldset>
-                         
-                        </div>
-                
-                <div class="form-group">
-                <button class="btn btn-primary btn-lg btn-block">Terminado</button>
-            </div>
-            </fieldset> 
-            </div>
-                              </form>
-          </div>
-
-            
-            
+    </header>
+    
+    <div class="container">
+        <div class ="principal row filtro-Complejos">
+            <!-- Comienza la clase  row -->
+            <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <section class="widget">
+                    <header>
+                        <h2>FILTRAR POR</h2>    
+                    </header>
+                    <hr>
+                    <!--Filtros de las Canchas -->
+                    <h3 onclick="muestra_oculta('filtroCancha')" style= "margin-left: 1px; ">Canchas</h3>
                     
+                    <!--Hacer que por defecto se muestre comprimido -->
+                    <div id="filtroCancha">
+                    <div class="form-group espacios">
+                        
+                        <div class ="principal row " style= "margin-left: 1px; ">
+                            <label class="fontMasChica" style= "margin-left: 2px; margin-top:4px; " >Cant. de jugadores:</label>
+                        </div>
+                        <div class ="principal row " style= "margin-left: 1px; ">
+                            <SELECT NAME="cboCantJugadores" SIZE=1 style="width:220px; height:30px; color:black;"> 
+                                <OPTION>Todos</OPTION>
+                                <OPTION>5</OPTION>
+                                <OPTION>6</OPTION>
+                                <OPTION>7</OPTION>
+                                <OPTION>8</OPTION> 
+                                <OPTION>9</OPTION> 
+                                <OPTION>10</OPTION> 
+                                <OPTION>11</OPTION> 
+                            </SELECT> 
+                        </div>
+                        
+                        <div class ="principal row " style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" style= "margin-left: 2px;  margin-top: 5px;" >Superficie:</label>
+                        </div>    
+                        <div class ="principal row " style= "margin-left: 1px; ">
+                            <SELECT NAME="cboPisos" SIZE=1 style="width:220px; height:30px; color:black;"> 
+                            <OPTION>Todos</OPTION>
+                            <OPTION>Sintetico</OPTION>
+                            <OPTION>Tierra</OPTION>
+                            <OPTION>Cesped</OPTION>
+                            <OPTION>Baldoza</OPTION> 
+                        </SELECT>
+                        </div>
+                        <div class ="principal row " style= "margin-left: 1px; ">
+                            <label class="fontMasChica" style= "margin-left: 2px;  margin-top: 5px;" >Precio Desde </label>
+                        </div>
+                        <div class ="principal row " style= "margin-left: 1px; ">
+                            <input type="text" name="txtPrecioHasta" style="width:220px; height:30px; color:black;"/></label>
+                        </div>
+                        <div class ="principal row " style= "margin-left: 1px; ">
+                            <label class="fontMasChica" style= "margin-left: 2px;  margin-top: 5px;" >Precio Hasta </label>
+                        </div>
+                        <div class ="principal row " style= "margin-left: 1px; ">
+                            <input type="text" name="txtPrecioDesde" style="width:220px; height:30px; color:black;"/></label>
+                        </div>
+                    </div>
+                    <!-- Seccion CheckBox -->
+                    <div class="form-group espacios">
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Parrila</label>
+                        </div>
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Vestidores</label>
+                        </div>
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Techada</label>
+                        </div>
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Luces</label>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group espacios">
+                        <label for="sel2" class="font-titulo-Filtro" >Fecha:</label>
+                        <div class='input-group date'>
+                            <input type='text'  class="form-control" id="fecha" style="height:31px;"/>
+                            <span class="input-group-addon"  style="height:30px;"  onclick="mostrarCalendario()" >
+                            <span class="glyphicon glyphicon-calendar"  ></span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group espacios">
+                        <div class ="principal row espacios" style= "margin-left: 1px;">
+                            <label class="font-titulo-Filtro">Horarios:</label>
+        
+                            <label for="sel2" class="fontMasChica" style= "margin-left: 2px; margin-top: 4px; " >Desde:</label>
+                            <SELECT NAME="cboHoraInicial" SIZE=1 class="combo-horario"> 
+                            <OPTION>8 Hs</OPTION>
+                            <OPTION>9 Hs</OPTION>
+                            <OPTION>10 Hs</OPTION>
+                            <OPTION>11 Hs</OPTION> 
+                            <OPTION>12 Hs</OPTION> 
+                            <OPTION>13 Hs</OPTION> 
+                            <OPTION>14 Hs</OPTION> 
+                            <OPTION>15 Hs</OPTION>
+                            <OPTION>16 Hs</OPTION> 
+                            <OPTION>17 Hs</OPTION> 
+                            <OPTION>18 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>20 Hs</OPTION> 
+                            <OPTION>21 Hs</OPTION> 
+                            <OPTION>22 Hs</OPTION> 
+                            <OPTION>23 Hs</OPTION> 
+                        </SELECT> 
+                            
+                            <label for="sel2" class="fontMasChica" style= "margin-left: 1px" > Hasta:</label>
+                            <SELECT NAME="cboHoraFin" SIZE=1 class="combo-horario"> 
+                            <OPTION>8 Hs</OPTION>
+                            <OPTION>9 Hs</OPTION>
+                            <OPTION>10 Hs</OPTION>
+                            <OPTION>11 Hs</OPTION> 
+                            <OPTION>12 Hs</OPTION> 
+                            <OPTION>13 Hs</OPTION> 
+                            <OPTION>14 Hs</OPTION> 
+                            <OPTION>15 Hs</OPTION>
+                            <OPTION>16 Hs</OPTION> 
+                            <OPTION>17 Hs</OPTION> 
+                            <OPTION>18 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>20 Hs</OPTION> 
+                            <OPTION>21 Hs</OPTION> 
+                            <OPTION>22 Hs</OPTION> 
+                            <OPTION  selected="selected">23</OPTION> 
+                        </SELECT> 
+                            <div class ="principal row " style= "margin-left: 1px; margin-top: 3px; ">
+                                <label class="fontMasChica" ><input type="checkbox" value=""> Todos</label>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div>
+                        <button type="button" class="btn btn-primary  btn-lg btn-block" style="border-radius: 8px;">
+                           
+                            <i class="glyphicon glyphicon-search"></i>
+                            Buscar...
+                        </button>
+                    </div>       
+                </div>
+                <!--Espacio en blanco -->
+                <hr>
+                <!--Filtros de los complejos -->
+                <h3 onclick="muestra_oculta('filtroComplejo')" style= "margin-left: 1px; ">Complejos</h3>
                 
-          
-          
-          
-          
-      
-  </div>
-  </div>
-</div>
+                    <!--Hacer que por defecto se muestre comprimido -->
+                    <div id="filtroComplejo">
 
+                    <div class ="principal row " style= "margin-left: 1px; ">
+                        <label class="fontMasChica" style= "margin-left: 2px;  margin-top: 5px;" >Nombre </label>
+                    </div>
+                    <div class ="principal row " style= "margin-left: 1px; ">
+                        <input type="text" name="txtNombreComplejo" style="width:220px; height:30px; color:black;"/></label>
+                    </div>
 
-
-<!--about modal-->
-<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-  <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h2 class="text-center">ReserGol</h2>
-      </div>
-      <div class="modal-body">
-          <div class="col-md-12 text-center">
-           ReserGol es una plataforma web en la que podrás buscar las mejores canchas de fútbol! y reservar tu turno para jugar, con sólo un click!
-          
-          </div>
-      </div>
-      <div class="modal-footer">
-          <button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
-      </div>
-  </div>
-  </div>
-</div>
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
-	</body>
+                    <!-- Seccion CheckBox -->
+                    <div class="form-group espacios">
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Parrila</label>
+                        </div>
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Vestidores</label>
+                        </div>
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Techada</label>
+                        </div>
+                        <div class ="checkbox" style= "margin-left: 1px; margin-top: 3px; ">
+                            <label class="fontMasChica" ><input type="checkbox" value=""> Luces</label>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group espacios">
+                        <label for="sel2" class="font-titulo-Filtro" >Fecha:</label>
+                        <div class='input-group date'>
+                            <input type='text'  class="form-control" id="fecha" style="height:31px;"/>
+                            <span class="input-group-addon"  style="height:30px;"  onclick="mostrarCalendario()" >
+                            <span class="glyphicon glyphicon-calendar"  ></span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group espacios">
+                        <div class ="principal row espacios" style= "margin-left: 1px;">
+                            <label class="font-titulo-Filtro">Horarios:</label>
+        
+                            <label for="sel2" class="fontMasChica" style= "margin-left: 2px; margin-top: 4px; " >Desde:</label>
+                            <SELECT NAME="cboHoraInicial" SIZE=1 class="combo-horario"> 
+                            <OPTION>8 Hs</OPTION>
+                            <OPTION>9 Hs</OPTION>
+                            <OPTION>10 Hs</OPTION>
+                            <OPTION>11 Hs</OPTION> 
+                            <OPTION>12 Hs</OPTION> 
+                            <OPTION>13 Hs</OPTION> 
+                            <OPTION>14 Hs</OPTION> 
+                            <OPTION>15 Hs</OPTION>
+                            <OPTION>16 Hs</OPTION> 
+                            <OPTION>17 Hs</OPTION> 
+                            <OPTION>18 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>20 Hs</OPTION> 
+                            <OPTION>21 Hs</OPTION> 
+                            <OPTION>22 Hs</OPTION> 
+                            <OPTION>23 Hs</OPTION> 
+                        </SELECT> 
+                            
+                            <label for="sel2" class="fontMasChica" style= "margin-left: 1px" > Hasta:</label>
+                            <SELECT NAME="cboHoraFin" SIZE=1 class="combo-horario"> 
+                            <OPTION>8 Hs</OPTION>
+                            <OPTION>9 Hs</OPTION>
+                            <OPTION>10 Hs</OPTION>
+                            <OPTION>11 Hs</OPTION> 
+                            <OPTION>12 Hs</OPTION> 
+                            <OPTION>13 Hs</OPTION> 
+                            <OPTION>14 Hs</OPTION> 
+                            <OPTION>15 Hs</OPTION>
+                            <OPTION>16 Hs</OPTION> 
+                            <OPTION>17 Hs</OPTION> 
+                            <OPTION>18 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>19 Hs</OPTION> 
+                            <OPTION>20 Hs</OPTION> 
+                            <OPTION>21 Hs</OPTION> 
+                            <OPTION>22 Hs</OPTION> 
+                            <OPTION  selected="selected">23</OPTION> 
+                        </SELECT> 
+                            <div class ="principal row " style= "margin-left: 1px; margin-top: 3px; ">
+                                <label class="fontMasChica" ><input type="checkbox" value=""> Todos</label>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div>
+                        <button type="button" class="btn btn-primary  btn-lg btn-block" style="border-radius: 8px;">
+                           
+                            <i class="glyphicon glyphicon-search"></i>
+                            Buscar...
+                        </button>
+                    </div>       
+                </div>
+            </section>
+            </div>
+            <!-- poner aca los cuadros de complejos -->
+                <div class="col-md-3 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+                    <h3>
+                        <p href="#"><strong>Nombre del complejo</strong></p>
+                    </h3>
+                    <p>Descripcion Sencilla</p>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+                    <h3>
+                        <p href="#"><strong>Project Name</strong></p>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                </div>
+                <div class="col-md-3 portfolio-item">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    </a>
+                    <h3>
+                        <p href="#"><strong>Project Name</strong></p>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        </div> 
+        
+    </div>
+    
+    <div class="clearfix"></div>
+        <hr>
+        <div class="col-md-12 text-center">ReserGol 2015 -  Copyright © Todos los Derechos Reservados</div>
+        <hr>
+    <div/>    
+ 
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+	
+</body>
 </html>
