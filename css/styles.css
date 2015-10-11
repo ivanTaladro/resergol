@@ -34,6 +34,10 @@ body {
 .btn-warning,.label-warning,.progress-bar-warning{background-color:#f4b400;color:#444444;}
 
 
+/*IVAN*/
+label{font-weight:normal;}
+.titul{ text-align: center;}
+
 .carousel-caption {
   position: static;
   left: 0%;
@@ -274,7 +278,7 @@ h3,h4,h5 {
     .hero-unit p { font-size: 16px }
 }
 .carousel-container {
-    width: 80% !important;
+    width: 100% !important;
     padding-left: 0%;
     margin-top: 0px;
 }
@@ -295,12 +299,12 @@ h3,h4,h5 {
 .carousel-inner > .item > img{
     width: 100%; 
     min-height: 300px;
-    max-height: 300px;    
+    max-height: 328px;    
     border-radius: 15px;
      }
 
 
-.aver
+.busqueda
 {
     padding-top: 50px;
 }
@@ -581,8 +585,8 @@ PRICING STYLES
 .boxMapa
 {   
     margin-top: 20px;
-    height: 200px;
-    width: 260px;
+    height: 220px;
+    width: 230px;
     border-radius: 15px;
 
 }
@@ -597,6 +601,10 @@ PRICING STYLES
 }
 
 
+.letraHorarios
+{
+    font-family: sans-serif;
+}
 
 
 .infoUbicacionComplejo
@@ -616,7 +624,7 @@ PRICING STYLES
 					margin-bottom: 20px; 
 					background-color:#FFF }
 
-#map-container { height: 200px }
+#map-container { height: 220px }
 
 
 .cuadro_intro_hover{
@@ -661,5 +669,166 @@ PRICING STYLES
 		text-align: center;
 		top:-20px;
 		width: 100%;
+    }
+        
+        
+
+/*IVAN - PARA LOS COMENTARIOS DE LOS USUARIOS*/
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
+.detailBox {
+    width:540px;
+    border:1px solid #bbb;
+    margin-left:0px;
+    background-color: aliceblue;
+
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:150px;
+    overflow: scroll;
+}
+.commentList li {
+    margin:0;
+    margin-top:5px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+}
+/*IVAN-FIN DE LOS COMENTARIOS DE LOS USUARIOS*/
+
+.boxComplejo
+{
+    min-height: 310px;
+    max-height: 310px;
+}
+
+.widget {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 12px 17px;
+    color: #f8f8f8;
+    background: rgba(51, 51, 51, 0.2);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.widget2 {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 12px 17px;
+    color: #f8f8f8;
+    background: rgba(51, 51, 51, 0.2);
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.botonesPuntuacion {
+    color: aliceblue;
+
+}
+
+.imgMiniatura > img
+{
+
+    min-height: 120px;
+    max-height: 120px;
+    min-width: 150px;
+    max-width: 150px;
+    
+}
+
+.liSeparados li
+{
+    margin-top: 10px;
+}
+
+
+/*IVAN CAROUSEL CANCHAS*/
+
+.carouselCanchas {
+    margin-bottom: 0;
+	padding: 0 40px 30px 40px;
+}
+/* Reposition the controls slightly */
+.carouselCanchas-control {
+	left: -12px;
+}
+.carouselCanchas-control.right {
+	right: -12px;
+}
+/* Changes the position of the indicators */
+.carouselCanchas-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.carouselCanchas-indicators li {
+	background: #c0c0c0;
+}
+.carouselCanchas-indicators .active {
+background: #333333;
+}
+
+/*FIN IVAN CAROUSEL CANCHAS*/
 
 
