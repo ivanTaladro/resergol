@@ -410,14 +410,7 @@ body.background-dark {
   background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(102, 105, 104, 0.9), rgba(93, 112, 119, 0.89), rgba(160, 174, 150, 0.9));
 }
 
-th {
-   background-color: #437983;
-   height:120px;
-   font-weight: 300;
-   font-size:20px;
-   width:125;
-   vertical-align:bottom;
-}
+
 
 .fontMasChica{
     font-weight: 200;
@@ -435,11 +428,20 @@ th {
    font-size:20px;
 }
 
-td {
-   background-color: #88CC88;
-   height:80px;
+.thReservas {
+   background-color: #437983;
+   height:120px;
+   font-weight: 300;
+   font-size:20px;
    width:125;
    vertical-align:bottom;
+}
+
+.celdaReserva{
+    background-color: #88CC88;
+    height:80px;
+    width:125;
+    vertical-align:bottom;
 }
 
 .widget {
@@ -564,6 +566,14 @@ form-label-leftl {
 
 .comentarios{
     border-radius:10px;
+}
+
+.btn-circle {
+  width: 140px;
+  height: 140px;
+  line-height: 140px; /* adjust line height to align vertically*/
+  padding:0;
+  border-radius: 100%;
 }
 /*<PI> fin*/
 
@@ -975,6 +985,39 @@ background: #333333;
 
 /*FIN IVAN CAROUSEL CANCHAS*/
 
+
+/*****TABLA by Matias*******/
+.features-table {
+    text-shadow: 0 1px 0 #fff;
+    color: green;
+    background: white;  
+    height: 60px;
+    width: 100px;
+}
+
+.features-table td {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  border-bottom: 1px solid #cdcdcd;
+  box-shadow: 0 1px 0 white;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/*Body*/
+.features-table tbody td {
+  text-align: center;
+  font: normal 12px Tahoma;
+  width: 20px;
+}
+
+.statsData{
+    background-color: darkgreen;
+    color: white;
+
+}
+/*****Fin TABLA*******/
 
 
 

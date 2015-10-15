@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>ReserGol-Complejos</title>
+
+    
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/datepicker.css" rel="stylesheet">
+
+    
+</head>
+<body class="background-dark">
+    
+    <!--navbar-->
+   <div class="navbar navbar-default" id="navbar">
+        <div class="col-md-12">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <div class="row">
+                
+                    <a href="Index.html" class="menuLink" role="application"><h4><b>RESERGOL</b></h4></a>
+                </div>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#loginModal" role="button" data-toggle="modal">Ayuda</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          Menú <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="DuenioPrincipal.html" role="button">Principal</a></li>
+                          <li><a href="DuenioComplejo.html" role="button">Mi complejo</a></li>
+                          <li><a href="DuenioReservas.html" role="button">Mis Reservas</a></li>
+                          <li><a href="DuenioTorneos.html" role="button">Mis torneos</a></li>
+                          <li><a href="DuenioCanchas.html" role="button">Mis canchas</a></li>
+                          <li><a href="DuenioListaNegra.html" role="button">Lista negra</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#registracionModal" role="button" data-toggle="modal">Configuración de la cuenta</a></li>
+                    <li><a href="#aboutModal" role="button" data-toggle="modal">Salir</a></li>
+                </ul>
+            </div>	
+        </div>	
+        
+    </div>
+    
+        
+    <div class="container-fluid">
+        
+        <header class="row widget" >
+            <div style = "color: white; " class="container">
+                <h3  style=" font-size: 50px; text-align:center; font-style:italic;" ></span>Imagenes del complejo</h3>
+            </div>
+        </header>
+    </div>    
+
+
+    
+    
+    <div class="container" id="main">
+        <div class="container">
+            
+            <div class=" principal row " style="margin-bottom: 20px; display: inline;">
+                
+                <div class= "col-md-3 " style="height:400px; position:relative;" >
+                    <buton class="btn  btn-md btn-danger   pull-right btn-circle"  style="position:absolute; bottom:1px; left:120px;">
+                        <i class="glyphicon glyphicon-trash"></i>
+                        Eliminar imagen
+                    </buton>
+                </div>
+             
+                <div class="col-xs-12 col-sm-6 col-md-6" style="height:400px">
+                    <img src="images/canchas/cancha2.jpg" class="img-responsive" alt="Image" >
+                </div>
+         
+                
+                <div class= "col-md-3" style="height:400px; position:relative;">
+                    <buton href="#imagenModal" role="button" data-toggle="modal" class="btn  btn-md btn-success   pull-right btn-circle" style="position:absolute; bottom:1px;">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        Agregar imagen
+                    </buton>
+                </div>    
+                
+            </div>
+            
+            <div class="principal row">
+            	<div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+                
+                <div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+        	    
+        	    <div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+        	    
+        	    <div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+            </div>
+            
+             <div class="row">
+            	<div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+                
+                <div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+        	    
+        	    <div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+        	    
+        	    <div class="col-md-3 seleccion">
+    				<p>
+    					<img src="images/canchas/cancha1.jpg" class="img-responsive" alt="">
+    				</p>
+        	    </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+    <!--pi-->
+    <div class="clearfix"></div>
+        <hr>
+        <div class="col-md-12 text-center">ReserGol 2015 -  Copyright © Todos los Derechos Reservados</div>
+        <hr>
+    <div/>    
+ 
+     <!--modal nueva imagen-->
+    <div id="imagenModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-registracion">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+              
+                <div class="modal-body">
+                      <div class = 'form-horizontal well'>
+                        <fieldset>
+                             <div class="col-xs-12 col-sm-6 col-md-12">
+                                <img src="images/canchas/cancha2.jpg" class="img-responsive" alt="Image" >
+                             </div>
+                          </fieldset>
+                        </div>
+                    
+                            
+                        <fieldset>
+                            <div class="form-group">
+                               <div class="col-md-6"> 
+                                    <div class="form-group">
+                                        <button class="btn  btn-md btn-info btn-block" style="border-radius: 7px;">
+                                             <i class="glyphicon glyphicon-folder-open"></i>
+                                             Seleccionar
+                                        </button>   
+                                    </div>
+                                </div>
+                                
+                               
+                                <div class="col-md-6"> 
+                                    <div class="form-group">
+                                        <button class="btn  btn-md btn-success btn-block" style="border-radius: 7px;">
+                                            <i class="glyphicon glyphicon-floppy-save"></i>
+                                            Guardar foto
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        
+                        
+                        </fieldset> 
+                        </div>
+                                          </form>
+                      </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>
